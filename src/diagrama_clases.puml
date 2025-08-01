@@ -1,0 +1,93 @@
+@startuml
+
+' Estilo
+skinparam classAttributeIconSize 0
+skinparam monochrome true
+skinparam shadowing false
+skinparam classFontSize 12
+skinparam ArrowColor Black
+skinparam ClassBorderColor Black
+
+' Clases
+class ContenidoAudiovisual {
+  - id : int
+  - titulo : String
+  - duracionEnMinutos : int
+  - genero : String
+  + getId() : int
+  + getTitulo() : String
+  + getDuracionEnMinutos() : int
+  + getGenero() : String
+  + mostrarDetalles() : void
+}
+
+class Documental {
+  - tema : String
+  - investigador : Investigador
+  + getTema() : String
+  + setTema(tema : String) : void
+  + getInvestigador() : Investigador
+  + setInvestigador(investigador : Investigador) : void
+  + mostrarDetalles() : void
+}
+
+class Investigador {
+  - nombre : String
+  - especialidad : String
+  + getNombre() : String
+  + getEspecialidad() : String
+}
+
+class Pelicula {
+  - estudio : String
+  - actores : List<Actor>
+  + getEstudio() : String
+  + setEstudio(estudio : String) : void
+  + agregarActor(actor : Actor) : void
+  + mostrarDetalles() : void
+}
+
+class Actor {
+  - nombre : String
+  - edad : int
+  + getNombre() : String
+  + getEdad() : int
+}
+
+class SerieDeTV {
+  - temporadas : List<Temporada>
+  + agregarTemporada(temporada : Temporada) : void
+  + mostrarDetalles() : void
+}
+
+class Temporada {
+  - numero : int
+  - capitulos : int
+  + getNumero() : int
+  + getCapitulos() : int
+}
+
+class PruebaAudioVisual {
+  + main(args : String[]) : void
+}
+
+' Relaciones de herencia
+Documental --|> ContenidoAudiovisual
+Pelicula --|> ContenidoAudiovisual
+SerieDeTV --|> ContenidoAudiovisual
+
+' Asociación (Documental → Investigador)
+Documental --> Investigador : asocia
+
+' Agregación (Pelicula → Actor)
+Pelicula o-- "actores" Actor
+
+' Composición (SerieDeTV → Temporada)
+SerieDeTV *-- "temporadas" Temporada
+
+' Dependencia al Main (opcional)
+PruebaAudioVisual ..> Documental
+PruebaAudioVisual ..> Pelicula
+PruebaAudioVisual ..> SerieDeTV
+
+@enduml

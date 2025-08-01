@@ -6,13 +6,13 @@ package uni1a;
 import java.util.ArrayList;
 import java.util.List;
 
-// Subclase SerieDeTV que extiende de ContenidoAudiovisual
+// Subclase 'SerieDeTV' que extiende de 'ContenidoAudiovisual'
 public class SerieDeTV extends ContenidoAudiovisual {
-	// Atributos de la clase SerieDeTV
+	// Atributos de la clase 'SerieDeTV'
     private String canal;
     private List<Temporada> temporadas; // Relación de Composición 
 
-    // Consructor de la clase SerieDeTV
+    // Consructor de la clase 'SerieDeTV'
     public SerieDeTV(String titulo, int duracionEnMinutos, String genero, String canal) {
         super(titulo, duracionEnMinutos, genero);
         this.canal = canal;
@@ -20,20 +20,20 @@ public class SerieDeTV extends ContenidoAudiovisual {
     }
 
     
-    // Métodos getter
+    // Métodos getter y setter para el campo 'canal'
     public String getCanal() {
         return canal;
     }
     
+    public void setCanal(String canal) {
+        this.canal = canal;
+    }
+
+    // Método getter para la lista 'temporadas'
     public List<Temporada> getTemporadas(){
     	return temporadas;
     }
 
-    // Métodos setter
-    public void setCanal(String canal) {
-        this.canal = canal;
-    }
-    
     public void agregarTemporada(int numero, int cantidadEpisodios) {
     	Temporada nueva = new Temporada(numero, cantidadEpisodios);
     	temporadas.add(nueva);

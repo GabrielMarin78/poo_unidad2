@@ -1,28 +1,28 @@
 package uni1a;
 
 public class Temporada {
-	// Atributos de la clase Temporada
+	// Atributos de la clase 'Temporada'
     private int numero;
     private int cantidadEpisodios;
 
-    // Constructor de la clase Temporadas
+    // Constructor de la clase 'Temporada'
     public Temporada(int numero, int cantidadEpisodios) {
         this.numero = numero;
         this.cantidadEpisodios = cantidadEpisodios;
     }
 
-    // Métodos getters
+    // Métodos getter y setter para el campo 'numero'
     public int getNumero() {
     	return numero;
     }
-   
-    public int getCantidadEpisodios() {
-    	return cantidadEpisodios;
-    }
 
-    // Métodos setters
     public void setNumero(int numero) {
         this.numero = numero;
+    }
+
+ // Métodos getter y setter para el campo 'cantidadEpisodios'
+    public int getCantidadEpisodios() {
+    	return cantidadEpisodios;
     }
     
     public void setCantidadEpisodio(int cantidadEpisodios) {

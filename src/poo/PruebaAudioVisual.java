@@ -12,7 +12,7 @@ public class PruebaAudioVisual {
         Investigador investigador1 = new Investigador ("Dr. Julio Torres", "Astronomy");
 
         // Crear instancias de las subclases
-        ContenidoAudiovisual[] contenidos = new ContenidoAudiovisual[3];
+        ContenidoAudiovisual[] contenidos = new ContenidoAudiovisual[5];
         Pelicula pelicula = new Pelicula("Avatar", 125, "Accion", "20th Century Studios");
         pelicula.agregarActor(actor1);
         pelicula.agregarActor(actor2);
@@ -22,6 +22,8 @@ public class PruebaAudioVisual {
         serie.agregarTemporada(2, 8);
         contenidos[1] = serie;
         contenidos[2] = new Documental("Cosmos", 45, "Science", "Astronomy", investigador1);
+        contenidos[3] = new VideoYouTube("POO", 10, "Programación", "Todo Code", 1000, 500);
+        contenidos[4] = new Cortometraje("Galápagos", 20, "Turismo", "Valentina Quintero");
 
         // Mostrar los detalles de cada contenido audiovisual
         for (ContenidoAudiovisual contenido : contenidos) {

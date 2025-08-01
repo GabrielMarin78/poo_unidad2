@@ -3,26 +3,25 @@
  */
 package uni1a;
 
-// Subclase Documental que extiende de ContenidoAudiovisual
+// Subclase 'Documental' que extiende de 'ContenidoAudiovisual'
 public class Documental extends ContenidoAudiovisual {
-	// Atributos de la clase Documental
+	// Atributos de la clase 'Documental'
     private String tema;
     private Investigador investigador; // Relación de Asociación
 
     
-    // Constructor de la clase Documental
+    // Constructor de la clase 'Documental'
     public Documental(String titulo, int duracionEnMinutos, String genero, String tema, Investigador investigador) {
         super(titulo, duracionEnMinutos, genero);
         this.tema = tema;
         this.investigador = investigador;
     }
 
-    // Métodos getter
+    // Métodos getter y setter para el campo 'tema'
     public String getTema() {
         return tema;
     }
 
-    // Métodos setter
     public void setTema(String tema) {
         this.tema = tema;
     }

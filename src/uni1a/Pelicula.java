@@ -6,25 +6,24 @@ package uni1a;
 import java.util.ArrayList;
 import java.util.List;
 
-// Subclase Pelicula que extiende de ContenidoAudiovisual
+// Subclase 'Pelicula' que extiende de 'ContenidoAudiovisual'
 public class Pelicula extends ContenidoAudiovisual {
-	// Atributos de la clase Pelicula
+	// Atributos de la clase 'Pelicula'
     private String estudio;
     private List<Actor> actores; // Relación de Agregación
 
-    // Constructor de la clase Pelicula
+    // Constructor de la clase 'Pelicula'
     public Pelicula(String titulo, int duracionEnMinutos, String genero, String estudio) {
         super(titulo, duracionEnMinutos, genero);
         this.estudio = estudio;
         this.actores = new ArrayList<>(); // Se inicializa la lista, pero los actores vienen de afuera
     }
 
-    // Métodos getter
+    // Métodos getter y setter para el campo 'estudio'
     public String getEstudio() {
         return estudio;
     }
 
-    // Métodos setter
     public void setEstudio(String estudio) {
         this.estudio = estudio;
     }
