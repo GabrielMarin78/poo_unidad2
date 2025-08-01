@@ -7,14 +7,14 @@ package uni1a;
 public class VideoYouTube extends ContenidoAudiovisual {
 	// Atributos de la clase 'VideoYoutube'
     private String canal;
-    private int seguidores;
+    private int suscriptores;
     private int likes;
 
     // Constructor de la clase 'VideoYouTube'
-    public VideoYouTube(String titulo, int duracionEnMinutos, String genero, String canal, int seguidores, int likes) {
+    public VideoYouTube(String titulo, int duracionEnMinutos, String genero, String canal, int suscriptores, int likes) {
         super(titulo, duracionEnMinutos, genero);
         this.canal = canal;
-        this.seguidores = seguidores;
+        this.suscriptores = suscriptores;
         this.likes = likes;
     }
 
@@ -27,13 +27,13 @@ public class VideoYouTube extends ContenidoAudiovisual {
         this.canal = canal;
     }
 
-    // Métodos getter y setter para el campo 'seguidores'
-    public int getSeguidores() {
-    	return seguidores;
+    // Métodos getter y setter para el campo 'suscriptores'
+    public int getSuscriptores() {
+    	return suscriptores;
     }
     
-    public void setSeguidores(int seguidores) {
-        this.seguidores = seguidores;
+    public void setSuscriptores(int suscriptores) {
+        this.suscriptores = suscriptores;
     }
 
     // Métodos getter y setter para el campo 'canal'
@@ -53,7 +53,7 @@ public class VideoYouTube extends ContenidoAudiovisual {
         System.out.println("Duración en minutos: " + getDuracionEnMinutos());
         System.out.println("Género: " + getGenero());
         System.out.println("Canal: " + getCanal());
-        System.out.println("Seguidores: " + getSeguidores());        
+        System.out.println("Suscriptores: " + getSuscriptores());        
         System.out.println("Likes: " + getLikes());        
         System.out.println();
     }

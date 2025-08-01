@@ -1,4 +1,4 @@
-@startuml
+@startuml diagrama_clases
 
 ' Estilo
 skinparam classAttributeIconSize 0
@@ -67,6 +67,26 @@ class Temporada {
   + getCapitulos() : int
 }
 
+class Cortometraje {
+  - director : String
+  + getDirector() : String
+  + setDirector(director : String) : void
+  + mostrarDetalles() : void
+}
+
+class VideoYouTube {
+  - canal : String
+  - suscriptores : int
+  - likes : int
+  + getCanal() : String
+  + getSuscriptores() : int
+  + getLikes() : int
+  + setCanal(canal : String) : void
+  + setSuscriptores(suscriptores : int) : void
+  + setLikes(likes : int) : void
+  + mostrarDetalles() : void
+}
+
 class PruebaAudioVisual {
   + main(args : String[]) : void
 }
@@ -75,6 +95,8 @@ class PruebaAudioVisual {
 Documental --|> ContenidoAudiovisual
 Pelicula --|> ContenidoAudiovisual
 SerieDeTV --|> ContenidoAudiovisual
+Cortometraje --|> ContenidoAudiovisual
+VideoYouTube --|> ContenidoAudiovisual
 
 ' Asociación (Documental → Investigador)
 Documental --> Investigador : asocia
@@ -89,5 +111,7 @@ SerieDeTV *-- "temporadas" Temporada
 PruebaAudioVisual ..> Documental
 PruebaAudioVisual ..> Pelicula
 PruebaAudioVisual ..> SerieDeTV
+PruebaAudioVisual ..> Cortometraje
+PruebaAudioVisual ..> VideoYouTube
 
 @enduml
