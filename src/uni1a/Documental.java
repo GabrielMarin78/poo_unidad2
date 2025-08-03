@@ -26,6 +26,15 @@ public class Documental extends ContenidoAudiovisual {
         this.tema = tema;
     }
     
+    // Métodos getter y setter para 'investigador'
+    public Investigador getInvestigador() {
+        return investigador;
+    }
+
+    public void setInvestigador(Investigador investigador) {
+        this.investigador = investigador;
+    }
+    
     @Override
     public void mostrarDetalles() {
         System.out.println("Detalles del documental:");

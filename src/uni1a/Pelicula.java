@@ -28,6 +28,10 @@ public class Pelicula extends ContenidoAudiovisual {
         this.estudio = estudio;
     }
     
+    public List<Actor> getActores() {
+        return actores;
+    }
+    
     public void agregarActor(Actor actor) {
     	this.actores.add(actor);
     }

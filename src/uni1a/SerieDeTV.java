@@ -19,7 +19,6 @@ public class SerieDeTV extends ContenidoAudiovisual {
         this.temporadas = new ArrayList<>();
     }
 
-    
     // Métodos getter y setter para el campo 'canal'
     public String getCanal() {
         return canal;

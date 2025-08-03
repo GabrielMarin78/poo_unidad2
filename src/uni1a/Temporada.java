@@ -25,7 +25,7 @@ public class Temporada {
     	return cantidadEpisodios;
     }
     
-    public void setCantidadEpisodio(int cantidadEpisodios) {
+    public void setCantidadEpisodios(int cantidadEpisodios) {
         this.cantidadEpisodios = cantidadEpisodios;
     } 
 }
