@@ -1,11 +1,10 @@
-package poo.util;
+package poo_util;
 
 import java.io.*;
 import java.util.*;
 import uni1a.*;
 
 public class ArchivoUtil {
-
     // Leer películas desde archivo CSV
     public static List<Pelicula> leerPeliculasDesdeCSV(String ruta) {
         List<Pelicula> peliculas = new ArrayList<>();
@@ -97,7 +96,7 @@ public class ArchivoUtil {
                 series.add(serie);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Error al leer archivo: " + ruta);
         }
         return series;
     }
@@ -117,7 +116,7 @@ public class ArchivoUtil {
                 pw.println(sb.toString());
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Error al escribir archivo: " + ruta);
         }
     }
     
@@ -140,7 +139,7 @@ public class ArchivoUtil {
                 lista.add(documental);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Error al leer archivo: " + ruta);
         }
         return lista;
     }
@@ -157,8 +156,7 @@ public class ArchivoUtil {
                            documental.getInvestigador().getEspecialidad());
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Error al escribir archivo: " + ruta);
         }
     }
-
 }
