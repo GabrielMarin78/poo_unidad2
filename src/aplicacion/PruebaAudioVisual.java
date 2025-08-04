@@ -1,4 +1,4 @@
-package controlador;
+package aplicacion;
 
 import modelo.*;
 import util.ArchivoUtil;
