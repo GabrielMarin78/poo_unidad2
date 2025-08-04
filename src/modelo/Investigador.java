@@ -1,4 +1,4 @@
-package uni1a;
+package modelo;
 
 public class Investigador {
 	// Atributos de la clase 'Investigador'

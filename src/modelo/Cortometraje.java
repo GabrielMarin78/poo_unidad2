@@ -1,7 +1,7 @@
 /**
  * Class Cortometraje
  */
-package uni1a;
+package modelo;
 
 // Subclase 'Cortometraje' que extiende de 'ContenidoAudiovisual'
 public class Cortometraje extends ContenidoAudiovisual {

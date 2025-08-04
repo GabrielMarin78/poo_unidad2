@@ -1,10 +1,8 @@
-package poo;
+package controlador;
 
-import uni1a.*;
-
+import modelo.*;
+import util.ArchivoUtil;
 import java.util.List;
-
-import poo_util.ArchivoUtil;
 
 public class PruebaAudioVisual {
 	public static void main(String[] args) {
@@ -40,7 +38,7 @@ public class PruebaAudioVisual {
         
         // Se puede agregar una nueva película de forma manual
         Pelicula nueva = new Pelicula("Matrix", 136, "Ciencia Ficción", "Warner Bros");
-        nueva.agregarActor(new uni1a.Actor("Keanu Reeves", 55));
+        nueva.agregarActor(new modelo.Actor("Keanu Reeves", 55));
         peliculas.add(nueva);
 
         // Guardar nuevamente todas las películas en el archivo

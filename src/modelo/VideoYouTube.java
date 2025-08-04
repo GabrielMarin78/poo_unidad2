@@ -1,7 +1,7 @@
 /**
  * Class VideoYouTube
  */
-package uni1a;
+package modelo;
 
 // Subclase 'VideoYouTube' que extiende de 'ContenidoAudiovisual'
 public class VideoYouTube extends ContenidoAudiovisual {

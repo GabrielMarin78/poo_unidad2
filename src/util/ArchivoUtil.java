@@ -1,8 +1,8 @@
-package poo_util;
+package util;
 
 import java.io.*;
 import java.util.*;
-import uni1a.*;
+import modelo.*;
 
 public class ArchivoUtil {
     // Leer películas desde archivo CSV
@@ -160,3 +160,4 @@ public class ArchivoUtil {
         }
     }
 }
+	

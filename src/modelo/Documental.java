@@ -1,7 +1,7 @@
 /**
  * Class Documental
  */
-package uni1a;
+package modelo;
 
 // Subclase 'Documental' que extiende de 'ContenidoAudiovisual'
 public class Documental extends ContenidoAudiovisual {
